@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Unnimolzz ❤️</title>
+<style>
+  /* ===== General Styles ===== */
+  body, html {
+    margin:0;
+    padding:0;
+    font-family: 'Arial', sans-serif;
+    background: radial-gradient(#1a1a1a, #000);
+    color:#fff;
+    overflow-x:hidden;
+  }
+  a {color: inherit; text-decoration:none;}
+  
+  /* ===== Intro Screen ===== */
+  #intro {
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:#111;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    z-index:10;
+  }
+  #intro h1{
+    font-size:3em;
+    margin-bottom:20px;
+    color:#ff6b81;
+  }
+  #intro p{
+    font-size:1.5em;
+    margin-bottom:30px;
+    color:#fff;
+  }
+  #intro button{
+    padding:15px 30px;
+    font-size:18px;
+    border:none;
+    border-radius:30px;
+    background:#ff6b81;
+    cursor:pointer;
+    color:#fff;
+    transition:0.3s;
+  }
+  #intro button:hover{
+    transform:scale(1.05);
+    background:#ff4757;
+  }
+
+  /* ===== Main Content ===== */
+  #mainContent{display:none; padding:20px;}
+
+  /* ===== Gallery ===== */
+  .gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    margin-top:30px;
+  }
+  .gallery img{
+    width:200px;
+    height:150px;
+    object-fit:cover;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+  }
+  .gallery img:hover{transform:scale(1.05);}
+
+  /* ===== Video Section ===== */
+  .videos{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    margin-top:40px;
+  }
+  video{
+    width:300px;
+    border-radius:10px;
+  }
+
+  /* ===== Timeline ===== */
+  .timeline{
+    margin:50px auto;
+    max-width:600px;
+    position:relative;
+  }
+  .timeline::after{
+    content:'';
+    position:absolute;
+    width:4px;
+    background:#ff6b81;
+    top:0; bottom:0;
+    left:50%;
+    margin-left:-2px;
+  }
+  .event{
+    padding:20px;
+    position:relative;
+    width:50%;
+  }
+  .event.left{left:0;}
+  .event.right{left:50%;}
+  .event::before{
+    content:'';
+    position:absolute;
+    width:20px;
+    height:20px;
+    background:#ff6b81;
+    border-radius:50%;
+    top:25px;
+    right:-10px;
+  }
+  .event.right::before{left:-10px;}
+  .event p{margin:0; font-size:1.1em;}
+
+  /* ===== Love Letter ===== */
+  .letter{
+    background: rgba(255,255,255,0.1);
+    padding:20px;
+    border-radius:15px;
+    margin:50px auto;
+    max-width:600px;
+    font-size:1.2em;
+    line-height:1.6em;
+    display:none;
+  }
+
+  /* ===== Puzzle ===== */
+  .puzzle-container{
+    margin:50px auto;
+    text-align:center;
+  }
+  .puzzle-container canvas{
+    border:2px solid #fff;
+    border-radius:10px;
+  }
+
+  /* ===== Heart Button ===== */
+  #heartBtn{
+    font-size:2em;
+    cursor:pointer;
+    color:#ff6b81;
+    display:block;
+    margin:30px auto;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- Intro Screen -->
+<div id="intro">
+  <h1>Happy Birthday Unnimolzz ❤️</h1>
+  <p>(Fathimma Mohammed 🎉)</p>
+  <button onclick="startWebsite()">Click to Start 🎁</button>
+</div>
+
+<!-- Main Content -->
+<div id="mainContent">
+
+  <!-- Gallery Section -->
+  <h2 style="text-align:center; margin-top:20px;">Our Memories 📸</h2>
+  <div class="gallery">
+    <!-- Replace src with your pics -->
+    <img src="pic1.jpg" alt="Memory 1">
+    <img src="pic2.jpg" alt="Memory 2">
+    <img src="pic3.jpg" alt="Memory 3">
+    <img src="pic4.jpg" alt="Memory 4">
+    <img src="pic5.jpg" alt="Memory 5">
+    <img src="pic6.jpg" alt="Memory 6">
+    <img src="pic7.jpg" alt="Memory 7">
+    <img src="pic8.jpg" alt="Memory 8">
+    <img src="pic9.jpg" alt="Memory 9">
+    <img src="pic10.jpg" alt="Memory 10">
+    <img src="pic11.jpg" alt="Memory 11">
+    <img src="pic12.jpg" alt="Memory 12">
+    <img src="pic13.jpg" alt="Memory 13">
+    <img src="pic14.jpg" alt="Memory 14">
+    <img src="pic15.jpg" alt="Memory 15">
+    <img src="pic16.jpg" alt="Memory 16">
+    <img src="pic17.jpg" alt="Memory 17">
+    <img src="pic18.jpg" alt="Memory 18">
+    <img src="pic19.jpg" alt="Memory 19">
+    <img src="pic20.jpg" alt="Memory 20">
+  </div>
+
+  <!-- Video Section -->
+  <h2 style="text-align:center; margin-top:50px;">Videos 🎬</h2>
+  <div class="videos">
+    <!-- Replace src with your videos -->
+    <video src="video1.mp4" controls></video>
+    <video src="video2.mp4" controls></video>
+    <video src="video3.mp4" controls></video>
+    <video src="video4.mp4" controls></video>
+    <video src="video5.mp4" controls></video>
+  </div>
+
+  <!-- Timeline Section -->
+  <h2 style="text-align:center; margin-top:50px;">Our Story 📖</h2>
+  <div class="timeline">
+    <div class="event left"><p>We became friends playing Mini Militia 🎮</p></div>
+    <div class="event right"><p>Met in the bus after her exams 🚌</p></div>
+    <div class="event left"><p>Skipped exam for a movie 🎥</p></div>
+    <div class="event right"><p>Ice cream date after exam 🍦</p></div>
+    <div class="event left"><p>Could only meet during exams 💔✨</p></div>
+  </div>
+
+  <!-- Love Letter -->
+  <h2 style="text-align:center; margin-top:50px;">A Letter for You 💌</h2>
+  <div id="heartBtn" onclick="showLetter()">❤️ Click Me ❤️</div>
+  <div class="letter" id="loveLetter">
+    To my Unnimolzz ❤️<br><br>
+    You’re the only person who can be mean to me and still make me fall harder every day. I love when you call me Skeleton, because it means I’m your Skeleton. I love calling you my Fatty, because no one else deserves that name except you.<br><br>
+    From Mini Militia games to bus rides, from skipping exams for movies to ice cream dates… every small moment with you is the biggest memory of my life.<br><br>
+    I don’t care if we fight, laugh, or just sit in silence — as long as it’s with you. You’re my forever player 2, my love, my mean queen, my Unnimolzz.<br><br>
+    Happy Birthday ❤️<br>
+    Always yours, <br>
+    Skeleton
+  </div>
+
+  <!-- Puzzle Section -->
+  <h2 style="text-align:center; margin-top:50px;">Solve Our Puzzle 🧩</h2>
+  <div class="puzzle-container">
+    <canvas id="puzzle" width="400" height="400"></canvas>
+    <p>Drag pieces to complete our picture!</p>
+  </div>
+
+</div>
+
+<!-- Background Music -->
+<audio id="bgMusic" src="music.mp3"></audio>
+
+<script>
+/* ===== Click to Start ===== */
+function startWebsite(){
+  document.getElementById("intro").style.display="none";
+  document.getElementById("mainContent").style.display="block";
+  document.getElementById("bgMusic").play();
+}
+
+/* ===== Show Love Letter ===== */
+function showLetter(){
+  document.getElementById("loveLetter").style.display="block";
+  document.getElementById("heartBtn").style.display="none";
+}
+
+/* ===== Puzzle Script ===== */
+const canvas = document.getElementById('puzzle');
+const ctx = canvas.getContext('2d');
+const img = new Image();
+img.src = 'pic1.jpg'; // the picture to use for puzzle
+let pieces = [];
+const rows = 6, cols = 10;
+const pieceWidth = canvas.width/cols;
+const pieceHeight = canvas.height/rows;
+
+img.onload = function(){
+  // initialize pieces
+  for(let y=0;y<rows;y++){
+    for(let x=0;x<cols;x++){
+      pieces.push({sx:x*pieceWidth, sy:y*pieceHeight, dx:Math.random()*(canvas.width-pieceWidth), dy:Math.random()*(canvas.height-pieceHeight)});
+    }
+  }
+  drawPieces();
+}
+
+function drawPieces(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  pieces.forEach(p=>{
+    ctx.drawImage(img,p.sx,p.sy,pieceWidth,pieceHeight,p.dx,p.dy,pieceWidth,pieceHeight);
+    ctx.strokeRect(p.dx,p.dy,pieceWidth,pieceHeight);
+  });
+}
+
+</script>
+
+</body>
+</html>
